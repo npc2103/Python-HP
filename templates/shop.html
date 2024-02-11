@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shop['name'] }}</title>
+</head>
+<body>
+    <h1>{{ shop['name'] }}</h1>
+    <img src="{{ shop['logo_image'] }}" alt="{{ shop['name'] }} Logo">
+    <p><strong>Address:</strong> {{ shop['address'] }}</p>
+    <p><strong>Distance:{{ shop['distance'] }}m</strong></p>
+    <p><strong>Station:</strong> {{ shop['station_name'] }}</p>
+    <p><strong>Genre:</strong> {{ shop['genre']['name'] }}</p>
+    <p><strong>Sub Genre:</strong> {{ shop['sub_genre']['name'] }}</p>
+    <p><strong>Budget:</strong> {{ shop['budget']['name'] }} (Average: {{ shop['budget']['average'] }})</p>
+    <p><strong>Catch:</strong> {{ shop['catch'] }}</p>
+    <p><strong>Capacity:</strong> {{ shop['capacity'] }}</p>
+    <p><strong>Access:</strong> {{ shop['access'] }}</p>
+    <p><strong>Open:</strong> {{ shop['open'] }}</p>
+    <p><strong>Close:</strong> {{ shop['close'] }}</p>
+    <!-- 他にも表示したい情報があればここに追加 -->
+</body>
+</html>
+

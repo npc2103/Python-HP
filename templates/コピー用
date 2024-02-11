@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+    <header>ヘッダーです</header> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 border border-dark">2</div>
+            <div class="col-md-2 border border-dark">2</div>
+            <div class="col-md-2 border border-dark">2</div>
+            <div class="col-md-6 border border-dark">6</div>
+        </div>
+    </div>
+    <footer>フッターです</footer> 
+    <div class="container">
+        <h1>ログイン画面</h1>
+        <form method="POST">
+            <label for="">ユーザ名</label>
+            <input type="name" name="username" class="form-control">
+            <label for="">パスワード</label>
+            <input type="password" name="password" class="form-control">
+            <input type="submit" value="ログイン" class="btn btn-primary">
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

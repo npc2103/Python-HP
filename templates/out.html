@@ -1,0 +1,29 @@
+{% extends "chosebase.html" %}
+{% block choseblock %}
+<form action="/chose/out" method="POST">   
+    <button type="button" onclick="getCurrentLocation()">現在の位置を取得</button>
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
+    <input type="hidden" id="error_message" name="error_message">
+    <script>
+        function getCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("エラー");
+                document.getElementById('error_message').value = "このブラウザはGeolocationに対応していません。";
+                document.forms[0].submit();
+            }
+        }
+        function showPosition(position) {
+            document.getElementById('latitude').value = position.coords.latitude;
+            document.getElementById('longitude').value = position.coords.longitude;
+            alert("成功")
+        }
+        function showError(error) {
+            alert("エラー");
+            document.getElementById('error_message').value = "Geolocationエラー: " + error.message;
+            document.forms[0].submit();
+        }
+    </script>
+{% endblock %}

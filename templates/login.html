@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'bootstrap/base.html' %}
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/test.css') }}">
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>ログイン画面</h1>
+        <form method="POST">
+            <label for="">ユーザ名</label>
+            <input type="name" name="username" class="form-control">
+            <label for="">パスワード</label>
+            <input type="password" name="password" class="form-control">
+            <input type="submit" value="ログイン" class="btn btn-primary">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

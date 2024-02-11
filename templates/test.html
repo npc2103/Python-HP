@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/header.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}"><h1>FindingYummy</h1></a>
+        <nav>
+            <ul>
+                <li><a href="chose/out"><h6>現在地から</h6></a></li>
+                <li><a href="chose/inout"><h6>住所から</h6></a></li>
+                <li><a href="chose/out"><h6>キーワード</h6></a></li>
+                <li><a href="chose/out"><h6>マイページ</h6></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <input type="submit" value="現在地から" name="1" style="padding: 10px 20px;"><br>
+        <input type="submit" value="住所から" name="2" style="padding: 10px 20px;">
+        <input type="submit" value="キーワードから" name="3" style="padding: 10px 20px;">
+        <input type="submit" value="テスト" name="4" style="padding: 10px 20px;">
+    </div>
+
+    <footer>
+        <p>Powered by <a href="http://webservice.recruit.co.jp/">ホットペッパーグルメ Webサービス</a></p>
+    </footer>
+</body>
+</html>

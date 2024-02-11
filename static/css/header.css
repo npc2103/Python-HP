@@ -1,0 +1,35 @@
+html {
+    font-size: 100%;
+}
+body {
+    color: #24292e;
+}
+h1 {
+    font-size: 2rem;
+}
+
+/* header */
+header {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 4%;
+    border-top: red 5px solid;
+    border-bottom: red 1px solid;
+}
+header ul {
+    max-width: 300px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  5px 0;
+    align-items: center;
+  }
+header li {
+    margin-left: 5px;
+    font-size: 1.2rem;
+}

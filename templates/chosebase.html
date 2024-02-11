@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/chosebase.css') }}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    {% include "header.html" %}
+    {% block choseblock %}
+        {% endblock %}
+        <select name="distance">
+            <option value="1">300m
+            <option value="2">500m
+            <option value="3" selected>1km
+            <option value="4">2km
+            <option value="5">3km
+        </select>
+        <input type="submit" value="決定" name="enter" >
+        <br>
+        <ul>
+            <input type="submit" value="300m"  name="1"></li>
+            <input type="submit" value="500m"  name="2"></li>
+            <input type="submit" value="1km"  name="3"></li>
+            <input type="submit" value="2km"  name="4"></li>
+            <input type="submit" value="3km"  name="5"></li>
+        </ul>
+    </form>
+    <footer>
+        <p>Powered by <a href="http://webservice.recruit.co.jp/">ホットペッパーグルメ Webサービス</a></p>
+    </footer>
+</body>
+</html>

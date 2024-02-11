@@ -1,0 +1,14 @@
+{% block headerblock %}
+<header>
+    <link href="{{ url_for('static', filename='css/header.css') }}" rel="stylesheet">
+    <a href="{{ url_for('index') }}"><h1>FindingYummy</h1></a>
+    <nav>
+        <ul>
+            <li><a href="/chose/out"><h6>現在地から</h6></a></li>
+            <li><a href="/chose/inout"><h6>住所から</h6></a></li>
+            <li><a href="/chose/out"><h6>キーワード</h6></a></li>
+            <li><a href="/chose/out"><h6>マイページ</h6></a></li>
+        </ul>
+    </nav>
+</header>
+{% endblock %}
